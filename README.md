@@ -6,9 +6,14 @@
   - [1-2. Add TE account](#1-2-add-te-account)
   - [1-3. HEC 준비하기](#1-3-hec-준비하기)
   - [1-4. Thousand Eyes integration 생성하기](#1-4-thousand-eyes-integration-생성하기)
-  - [1-5.](#1-5)
+  - [1-5.Test Stream 설정하기](#1-5test-stream-설정하기)
 - [2. Content Pack (ITSI)](#2-content-pack-itsi)
   - [2-1. Install TE Content pack](#2-1-install-te-content-pack)
+  - [2-2. Test Stream 생성하기](#2-2-test-stream-생성하기)
+  - [3. Troubleshooting](#3-troubleshooting)
+  - [올바른 인덱스를 사용 중인지 확인](#올바른-인덱스를-사용-중인지-확인)
+  - [HEC SSL 이 활성화 되었는지 확인](#hec-ssl-이-활성화-되었는지-확인)
+  - [자체서명 인증서는 사용 불가](#자체서명-인증서는-사용-불가)
 
 # Requirements
 
@@ -69,7 +74,7 @@ Thousand Eyes UI 에서 **Manage > Integration > Integration 2.0** 탭으로 이
 
 ![](./src/images/1-4-te-operation.jpg)
 
-## 1-5.
+## 1-5.Test Stream 설정하기
 
 # 2. Content Pack (ITSI)
 
@@ -80,3 +85,13 @@ Thousand Eyes 콘텐츠팩을 설치하고 데이터가 올바로 유입되는�
 스플렁크 화면에서 **ITSI > Configuration > Data Integrations** 메뉴로 이동합니다.
 Content Library 탭에서 Cisco Thousand Eyes 콘텐츠팩을 선택하여 설치합니다
 ![](./src/images/2-1-te-content-pack.jpg)
+
+## 2-2. Test Stream 생성하기
+
+## 3. Troubleshooting
+
+## 올바른 인덱스를 사용 중인지 확인
+
+## HEC SSL 이 활성화 되었는지 확인
+
+## 자체서명 인증서는 사용 불가
