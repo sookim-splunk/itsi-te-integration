@@ -76,6 +76,9 @@ Thousand Eyes UI 에서 **Manage > Integration > Integration 2.0** 탭으로 이
 
 ## 1-5.Test Stream 설정하기
 
+Splunk 의 Thousand Eyes 앱에서 Input을 설정하여 데이터를 받아 올 수 있도록 설정합니다.
+![](./src/images/1-5-te-input.jpg)
+
 # 2. Content Pack (ITSI)
 
 Thousand Eyes 콘텐츠팩을 설치하고 데이터가 올바로 유입되는지 확인합니다.
