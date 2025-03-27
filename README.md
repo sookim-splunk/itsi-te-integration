@@ -1,3 +1,15 @@
+**Table of Contents**
+
+- [Requirements](#requirements)
+- [1. Data Input (Core)](#1-data-input-core)
+  - [1-1. Install TE App](#1-1-install-te-app)
+  - [1-2. Add TE account](#1-2-add-te-account)
+  - [1-3. HEC 준비하기](#1-3-hec-준비하기)
+  - [1-4. Thousand Eyes integration 생성하기](#1-4-thousand-eyes-integration-생성하기)
+  - [1-5.](#1-5)
+- [2. Content Pack (ITSI)](#2-content-pack-itsi)
+  - [2-1. Install TE Content pack](#2-1-install-te-content-pack)
+
 # Requirements
 
 - [ ] ITSI 프리미엄 앱이 설치 되어 있어야 합니다 (ITSI content pack 사용 시)
@@ -42,7 +54,8 @@ Thousand Eyes UI 에서 **Manage > Integration > Integration 2.0** 탭으로 이
 - Target : HEC endpoint 를 지정
 - Token : HEC 토큰 지정
 - save 를 눌러 저장합니다
-  ![](./src/images/1-4-te-connector.jpg)
+
+![](./src/images/1-4-te-connector.jpg)
 
 여기 생성된 Connector에 "Assigned Operations" 컬럼을 보면 아무것도 지정되지 않았다는 표시가 뜹니다.
 [Manage] 버튼을 누르고 새로운 operation을 생성합니다.
@@ -53,7 +66,8 @@ Thousand Eyes UI 에서 **Manage > Integration > Integration 2.0** 탭으로 이
 - Test Data Configuration : 데이터를 보낼 테스트를 지정합니다
 - 하단에 있는 Test 버튼을 눌러 성공적으로 스플렁크와 연결이 되는지 확인합니다.
 - Save를 눌러 저장합니다
-  ![](./src/images/1-4-te-operation.jpg)
+
+![](./src/images/1-4-te-operation.jpg)
 
 ## 1-5.
 
@@ -64,3 +78,5 @@ Thousand Eyes 콘텐츠팩을 설치하고 데이터가 올바로 유입되는�
 ## 2-1. Install TE Content pack
 
 스플렁크 화면에서 **ITSI > Configuration > Data Integrations** 메뉴로 이동합니다.
+Content Library 탭에서 Cisco Thousand Eyes 콘텐츠팩을 선택하여 설치합니다
+![](./src/images/2-1-te-content-pack.jpg)
