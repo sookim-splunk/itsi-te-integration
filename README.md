@@ -9,11 +9,8 @@
   - [1-5.Test Stream 설정하기](#1-5test-stream-설정하기)
 - [2. Content Pack (ITSI)](#2-content-pack-itsi)
   - [2-1. Install TE Content pack](#2-1-install-te-content-pack)
-  - [2-2. Test Stream 생성하기](#2-2-test-stream-생성하기)
-  - [3. Troubleshooting](#3-troubleshooting)
-  - [올바른 인덱스를 사용 중인지 확인](#올바른-인덱스를-사용-중인지-확인)
-  - [HEC SSL 이 활성화 되었는지 확인](#hec-ssl-이-활성화-되었는지-확인)
-  - [자체서명 인증서는 사용 불가](#자체서명-인증서는-사용-불가)
+  - [2-2. 콘텐츠팩인 올바른 인덱스를 사용하는지 확인](#2-2-콘텐츠팩인-올바른-인덱스를-사용하는지-확인)
+- [참조](#참조)
 
 # Requirements
 
@@ -91,12 +88,37 @@ Thousand Eyes 콘텐츠팩을 설치하고 데이터가 올바로 유입되는�
 Content Library 탭에서 Cisco Thousand Eyes 콘텐츠팩을 선택하여 설치합니다
 ![](./src/images/2-1-te-content-pack.jpg)
 
-## 2-2. Test Stream 생성하기
+설치 옵션 화면에서 아래 부분이 모두 선택이 되었는지 확인합니다.
 
-## 3. Troubleshooting
+- [ ] 콘텐츠팩의 모든 요소를 선택합니다
+- [ ] Import as enabled 를 활성화 시킵니다
+- [ ] Activate All saved search 를 선택합니다
 
-## 올바른 인덱스를 사용 중인지 확인
+## 2-2. 콘텐츠팩인 올바른 인덱스를 사용하는지 확인
 
-## HEC SSL 이 활성화 되었는지 확인
+Cisco ThousandEyes용 콘텐츠 팩은 검색 매크로를 사용하여 모든 검색이 동일한 인덱스를 사용하도록 합니다. 검색 매크로는 Cisco ThousandEyes App for Splunk가 데이터를 수집하는 데 사용하는 것과 동일한 인덱스를 사용하도록 구성해야 합니다.
 
-## 자체서명 인증서는 사용 불가
+> [!Caution]
+> TE Content Pack 이 쓰는 인덱스와 TE App 이 쓰는 인덱스가 같아야합니다
+
+인덱스를 확인하는 방법은 아래와 같습니다.
+**Settings > Advanced Search > Search Macro** 메뉴로 이동하여 App 구분을 **Cisco ThousandEyes(DA-ITSI-CP-thousandeyes)** 를 선택합니다
+
+출력되는 항목 중 "itsi_cp_thousandeyes_index" 항목을 찾아 지정 된 인덱스의 이름을 확인합니다.
+
+![](/src/images/2-2-check-index.jpg)
+
+이제는 **Thousand Eyes App** 으로 이동하여 Input 탭에 지정 된 인풋을 확인합니다.
+연필모양 버튼을 눌러 지정 된 인덱스의 이름을 확인합니다
+
+![](/src/images/2-2-check-index2.jpg)
+
+두 설정 모두 같은 인덱스를 가리키고 있나요?
+
+# 참조
+
+| 이름                                                    | 링크                                                                                                                                         |
+| ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Configuring ThousandEyes for Splunk Cloud or Enterprise | https://docs.thousandeyes.com/product-documentation/integration-guides/custom-built-integrations/opentelemetry/configure-splunk-integrations |
+| Cisco Thousand Eyes App for Splunk                      | https://docs.thousandeyes.com/product-documentation/integration-guides/custom-built-integrations/splunk-app                                  |
+| Install the Content Pack for Cisco ThousandEyes         | https://docs.splunk.com/Documentation/CPThousandEyes/1.0.0/CP/Install                                                                        |
